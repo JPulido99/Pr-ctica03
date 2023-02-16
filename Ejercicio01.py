@@ -1,32 +1,33 @@
-# Inicializar la lista de compras vacía
-lista_de_compras = []
+# Ejercicio 01
+# Creando lista vacía
+lista_compras = []
 
-# Función para agregar un producto al final de la lista
-def agregar_producto(producto):
-    lista_de_compras.append(producto)
+# Función agregar producto adelante
+def add_producto(producto):
+    lista_compras.append(producto)
     print(f"{producto} ha sido agregado a la lista de compras.")
 
-# Función para eliminar el primer producto de la lista
-def eliminar_producto():
-    if len(lista_de_compras) > 0:
-        producto_eliminado = lista_de_compras.pop(0)
+# Función eliminar último producto
+def delete_producto():
+    if len(lista_compras) > 0:
+        producto_eliminado = lista_compras.pop(0)
         print(f"{producto_eliminado} ha sido eliminado de la lista de compras.")
     else:
-        print("La lista de compras está vacía.")
+        print("La lista está vacía.")
 
-# Función para mostrar todos los productos en la lista en orden de compra
+# Función mostrar productos de lista
 def mostrar_lista():
-    if len(lista_de_compras) > 0:
+    if len(lista_compras) > 0:
         print("Lista de compras:")
-        for i, producto in enumerate(lista_de_compras, start=1):
+        for i, producto in enumerate(lista_compras, start=1):
             print(f"{i}. {producto}")
     else:
-        print("La lista de compras está vacía.")
+        print("La lista está vacía.")
 
-# Ejemplo de uso
-agregar_producto("Manzanas")
-agregar_producto("Leche")
-agregar_producto("Pan")
+# Prueba
+add_producto("Carro")
+add_producto("Perro")
+add_producto("Casa")
 mostrar_lista()
-eliminar_producto()
+delete_producto()
 mostrar_lista()
